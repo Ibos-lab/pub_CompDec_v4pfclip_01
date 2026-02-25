@@ -1,0 +1,77 @@
+[project]
+authors = [
+    { name = "Camila Losada", email = "camilosadaa@hotmail.com"},
+    { name = "Guilhem Ibos", email = "guilhem.ibos@univ-amu.fr"},
+]
+maintainers = [
+    {name = "Camila Losada", email = "camilosadaa@hotmail.com"}
+]
+name = "compdec_v4pfclip_01"
+description = "A set of python modules to analyse electrophysiology data"
+version = "0.1.0"
+license = { file = "LICENSE" }
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">= 3.10"
+dependencies = [
+    "numpy >=1.23", 
+    "scipy>=1.14",
+    "mne>=1.8",
+    "scikit-learn", 
+    "h5py",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Repository = "https://https://github.com/Ibos-lab/pub_CompDec_v4pfclip_01"
+Documentation = "https://https://github.com/Ibos-lab/pub_CompDec_v4pfclip_01/#README.md"
+Issues = "https://https://github.com/Ibos-lab/pub_CompDec_v4pfclip_01/issues"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.11.0",
+    "black>=24.3.0",
+]
+
+[tool.black]
+line-length = 79
+preview = true
+exclude = '''
+/(
+    \.eggs         # exclude a few common directories in the
+  | \.git          # root of the project
+  | \.mypy_cache
+  | \.vscode
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 79
+exclude=[
+    ".git",
+    "__pycache__",
+    "dist",
+    "build",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
