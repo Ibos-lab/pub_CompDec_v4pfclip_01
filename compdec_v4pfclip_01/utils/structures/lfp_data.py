@@ -45,7 +45,8 @@ class LfpData:
             experiment (str): experiment number.
             recording (str): recording number.
             lfps (np.ndarray): array of shape (trials x ch x time) containing the lfp values at each ms.
-
+            ch_row (np.ndarray): physical position on the electrode. PFC and V4-> 0:lateral, 7: median. LIP-> 0:deepest
+            ch_col (np.ndarray): physical position on the electrode. PFC and V4-> 0:anterior, 7: posterior. LIP-> 0:deepest
             ------ bhv ---------
             block (np.ndarray): array of shape (trials) containing:
                                 - 1 when is a DMTS trial.

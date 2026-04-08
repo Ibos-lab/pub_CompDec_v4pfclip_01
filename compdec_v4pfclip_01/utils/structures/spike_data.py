@@ -39,6 +39,8 @@ class SpikeData:
             sp_samples (np.ndarray): array of shape (neurons x time) containing the number of spikes at each ms.
             clusters_id (np.ndarray): array of shape (neurons,1) containing the kilosort cluster ID.
             clusters_ch (np.ndarray): array of shape (neurons,1) containing the electrode channel that recorded the activity of each cluster.
+            ch_row (np.ndarray): physical position on the electrode. PFC and V4-> 0:lateral, 7: median. LIP-> 0:deepest
+            ch_col (np.ndarray): physical position on the electrode. PFC and V4-> 0:anterior, 7: posterior. LIP-> 0:deepest
             clusters_group (np.ndarray): array of shape (neurons,1) containing "good" when is a neuron or "mua" when is multi unit activity.
             clusters_depth (np.ndarray): array of shape (neurons,1) containing the de depth of each cluster.
         """

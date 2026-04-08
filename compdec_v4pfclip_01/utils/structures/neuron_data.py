@@ -59,8 +59,8 @@ class NeuronData:
             sp_samples (np.ndarray): array of shape (trials x time) containing the number of spikes at each ms in each trial.
             cluster_id (int): kilosort cluster ID.
             cluster_ch (int): electrode channel that recorded the activity of the cluster.
-            ch_row (int): # TODO compleate docstring
-            ch_col (int):
+            ch_row (int): physical position on the electrode. PFC and V4-> 0:lateral, 7: median. LIP-> 0:deepest
+            ch_col (int): physical position on the electrode. PFC and V4-> 0:anterior, 7: posterior. LIP-> 0:deepest
             cluster_group (str): "good" if it is a neuron or "mua" if it is a multi unit activity.
             cluster_number (int): number of good or mua.
             cluster_array_pos (int): position of the cluster in SpikeDate.sp_samples.
